@@ -1,11 +1,11 @@
 <?php
-
 session_start();
 ini_set('display_errors', 'on');
 error_reporting(E_ALL);
 date_default_timezone_set('Europe/Paris');
 require 'vendor/autoload.php';
-require_once 'config_bd.php';
+require_once 'config_bd.php';   //A modifier en priorité et à exclure du commit
+                                //si ce n'est pas déjà fait
 
 spl_autoload_register(function ($className) {
     $classNameR = str_replace("\\", DIRECTORY_SEPARATOR, $className);
